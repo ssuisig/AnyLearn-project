@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ddwu.com.mobile.anylearn2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
+
+    <permission
+        android:name="ddwu.com.mobile.anylearn2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ddwu.com.mobile.anylearn2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Anylearn2" >
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.WithaiSelect"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.WithaiLevel"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.SignUp2"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.SignUp1"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.SignIn"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.ScriptSaveChoice"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.ScriptNameInput"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MyScriptList"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MyScript"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MyDiaryScript"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MyDiaryMain"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.FirstSetting"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.Anylearn"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.DisplaySettingPage"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.ModeSettingPage"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.SoundSettingPage"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.NotificationSettingPage"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.AccountSettingPage"
+            android:exported="true" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.SettingPage"
+            android:exported="false" />
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MainPage"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="ddwu.com.mobile.anylearn2.MainActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="ddwu.com.mobile.anylearn2.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
